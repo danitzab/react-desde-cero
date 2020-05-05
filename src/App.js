@@ -14,7 +14,7 @@ const App = () => (
           />
           <div className="main-banner__data s-center">
             <p className="t2 s-mb-0">Cursos de EDteam</p>
-            <p>Tu futuro te está esperando Marica!</p>
+            <p>Tu futuro te está esperando, Marica el último!</p>
             <a href="https://ed.team" className="button">
               Suscribirse
             </a>
