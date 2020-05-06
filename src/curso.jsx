@@ -1,7 +1,7 @@
 import React from "react";
 import Proptypes from "prop-types"
 
-const Curso = ({title, image, price, profesor}) => (  //componente de funcion, componente tonto, solo se limita a mostrar en la interfase pero no es logico
+const Curso = ({id,title, image, price, profesor}) => (  //componente de funcion, componente tonto, solo se limita a mostrar en la interfase pero no es logico
   <article className="card">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
       <img
@@ -15,7 +15,7 @@ const Curso = ({title, image, price, profesor}) => (  //componente de funcion, c
         {profesor}
       </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="#">
+        <a className="button--ghost-alert button--tiny" href="https://ed.team">
           { `$ ${price} USD` }
         </a>
       </div>
