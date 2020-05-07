@@ -1,22 +1,25 @@
 import React from 'react';
-import './styles/styles.scss';
-import Banner from './Banner';
-import Formulario from './Formulario';
-import CourseGrid from './CourseGrid';
-import Course from './Course';
+import '../styles/styles.scss';
+import Form from './Pages/Form';
+import CourseGrid from './Organisms/CourseGrid';
+import Course from './Pages/Course';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MainMenu from './MainMenu';
+import MainMenu from './Organisms/MainMenu';
+import History from './Pages/History';
+import Home from './Pages/Home'
 
 const App = () => (
   <Router>
     <MainMenu />
     <Switch>
-      <Route path="/" exact component={Banner} />
+      <Route path="/" exact component={Home} />
       <Route path="/cursos/:id" component={Course} />
       <Route path="/cursos" component={CourseGrid} />
+      <Route path="/Historial/:id" component={History} />
+      <Route path="/Historial" component={History} />
       <Route
         path="/formulario"
-        component={() => <Formulario name="página de contacto" />}
+        component={() => <Form name="página de contacto" />}
       />
       <Route
         component={() => (
