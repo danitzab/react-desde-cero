@@ -1,13 +1,16 @@
 import React from "react";
 import Proptypes from "prop-types"
+import { Link } from "react-router-dom";
 
 const Curso = ({id,title, image, price, profesor}) => (  //componente de funcion, componente tonto, solo se limita a mostrar en la interfase pero no es logico
   <article className="card">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-      <img
+     <Link to={ `/Cursos/${id}` }>
+     <img
         src={image}
         alt={title}
       />
+     </Link>
     </div>
     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
       <h3 className="center">{title}</h3>
@@ -18,7 +21,7 @@ const Curso = ({id,title, image, price, profesor}) => (  //componente de funcion
         <a className="button--ghost-alert button--tiny" href="https://ed.team">
           { `$ ${price} USD` }
         </a>
-      </div>
+      </div>      
     </div>
   </article>
 );
