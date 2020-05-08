@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { element } from 'prop-types';
 
 class Form extends Component {
   constructor(props) {
@@ -7,7 +6,7 @@ class Form extends Component {
 
     this.state = {
       name: '',
-      mail: '',
+      email: '',
       date: new Date(),
     };
 
@@ -24,7 +23,7 @@ class Form extends Component {
 
   changeMail(e) {
     this.setState({
-      mail: e.target.value,
+      email: e.target.value,
     });
   }
 
@@ -53,15 +52,13 @@ class Form extends Component {
         </form>
         <div>
           <h2>{`Hola ${this.state.name}`} </h2>
-          <span>{`Tu correo es: ${this.state.mail}`}</span>
+          <span>{`Tu correo es: ${this.state.email}`}</span>
         </div>
       </div>
     );
   }
 
   componentDidMount() {
-    let element = document.getElementById('form-element');
-
     this.intervalDate = setInterval(() => {
       this.changeDate();
       console.log(new Date());
