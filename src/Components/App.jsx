@@ -1,39 +1,58 @@
 import React from 'react';
 import '../styles/styles.scss';
-import Form from './Pages/Form';
-import Courses from './Pages/Courses';
-import Course from './Pages/Course';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MainMenu from './Organisms/MainMenu';
-import History from './Pages/History';
-import Home from './Pages/Home'
-import Users from './Pages/Users';
+import AppRoutes from './AppRoutes';
+// import useFetch from './CustomHooks/useFetch';
+// import useCounter from './CustomHooks/useCounter';
+// import { render } from '@testing-library/react';
 
-const App = () => (
-  <Router>
-    <MainMenu />
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/cursos/:id" component={Course} />
-      <Route path="/cursos" component={Courses} />
-      <Route path="/Historial/:id" component={History} />
-      <Route path="/Historial" component={History} />
-      <Route path="/usuarios" component={Users} />
-      <Route
-        path="/formulario"
-        component={() => <Form name="página de contacto" />}
-      />
-      <Route
-        component={() => (
-          <div className="ed-grid">
-            <h1>Error 404</h1>
-            <span>Página no encontrada</span>
-          </div>
-        )}
-      />
-    </Switch>
-  </Router>
-);
+// function App() {
+//   const counterOne = useCounter();
+//   const counterTwo = useCounter();
+
+//   return (
+//     <div className="data">
+//       {counterOne.count}
+//       <br />
+//       <button onClick={counterOne.increase}>Agregar</button>
+//       <button onClick={counterOne.decrease}>Disminuir</button>
+
+//       <br />
+//       {counterTwo.count}
+//       <br />
+//       <button onClick={counterTwo.increase}>Agregar</button>
+//       <button onClick={counterTwo.decrease}>Disminuir</button>
+//     </div>
+//   );
+// }
+
+// const App = () => {
+// const users = useFetch(
+//   'http://my-json-server.typicode.com/Danitzab/db-json/cursos',
+//   []
+// );
+// const posts = useFetch(
+//   'http://my-json-server.typicode.com/Danitzab/db-json/cursos',
+//   []
+// );
+// return (
+//   <div className="data">
+//     <ul>
+//       {' '}
+//       {users.loading && <p>Cargando</p>}
+//       {users.data &&
+//         users.data.map((user) => <li key={user.id}>{user.titulo}</li>)}
+//     </ul>
+//     <ul>
+//       {' '}
+//       {posts.loading && <p>Cargando</p>}
+//       {posts.data &&
+//         posts.data.map((posts) => <li key={posts.id}>{posts.titulo}</li>)}
+//     </ul>
+//   </div>
+// );
+// };
+
+const App = () => <AppRoutes />;
 
 export default App;
 
